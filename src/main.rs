@@ -65,3 +65,18 @@ fn perform_operation(operator: &str) {
     println!("Result: {} {} {} = {}", num1, operator, num2, result);
 }
 
+fn get_number(prompt: &str) -> f64 {
+    loop {
+        let mut input = String::new();
+        println!("{}", prompt);
+
+        io::stdin().read_line(&mut input).expect("Failed to read input");
+
+        match input.trim().parse::<f64>() {
+            Ok(num) => return num,
+            Err(_) => println!("Invalid number! Please enter a valid number."),
+        }
+    }
+}
+
+
