@@ -40,3 +40,28 @@ fn main() {
         }
     }
 }
+
+fn perform_operation(operator: &str) {
+    let num1 = get_number("Enter the first number: ");
+    let num2 = get_number("Enter the second number: ");
+
+    let result = match operator {
+        "+" => num1 + num2,
+        "-" => num1 - num2,
+        "*" => num1 * num2,
+        "/" => {
+            if num2 == 0.0 {
+                println!("Error: Cannot divide by zero!");
+                return;
+            }
+            num1 / num2
+        }
+        _ => {
+            println!("Invalid operator!");
+            return;
+        }
+    };
+
+    println!("Result: {} {} {} = {}", num1, operator, num2, result);
+}
+
