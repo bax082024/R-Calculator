@@ -16,7 +16,15 @@ fn main() {
         let mut choice = String::new();
         io::stdin().read_line(&mut choice).expect("Failed to read input");
 
-        
+        // convert input to number
+        let choice: u32 = match choice.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Invalid input! Please enter a number between 1 and 5.");
+                continue;
+            }
+
+        };
 
 
     }
