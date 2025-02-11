@@ -12,7 +12,12 @@ fn main() {
         println!("3. Multiply (*)");
         println!("4. Divide (/)");
 
+        // Read user choice
+        let mut choice = String::new();
+        io::stdin().read_line(&mut choice).expect("Failed to read input");
+
         
+
 
     }
 
