@@ -9,7 +9,10 @@ fn main() {
         println!("\nChoose an operation");
         println!("1. Add (+)");
         println!("2. Subtract (-)");
+        println!("3. Multiply (*)");
+        println!("4. Divide (/)");
 
+        
 
     }
 
